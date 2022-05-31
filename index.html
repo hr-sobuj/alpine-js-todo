@@ -31,6 +31,14 @@
             </div>
         </template>
         <button x-show="todos.length" x-on:click="todos=[]" class="mt-4 bg-red-700 hover:bg-red-800 px-6 py-2 rounded-md text-white text-bold focus:ring focus:ring-red-400 focus:ring-offset font-semibold">Clear Todo</button>
+        <div class="mt-7 text-md font-bold">
+            <div class="text-orange-600">
+                <span x-text="todos.length"></span><span>'s todo</span>
+            </div>
+            <div class="text-green-600">
+                <span x-text="todos.filter((todo)=>todo.complete).length"></span><span>'s todo completed</span>
+            </div>
+        </div>
     </div>
 </body>
 
